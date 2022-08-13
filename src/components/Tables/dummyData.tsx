@@ -1,0 +1,146 @@
+export const Inspection = [
+  {
+    id: "inspection-1",
+    name: "Nicolette Schultz",
+    address: "2372 Bahringer Neck Suite 769\nPort Masonstad, SC 20111-3404",
+    contactNo: "01008297102",
+    carNo: "MH-02-JH-6714",
+    email: "prathameshedu@gmail.com ",
+    status: "Bought",
+  },
+  {
+    id: "inspection-2",
+    name: "Martina Torp",
+    address: "7029 Macejkovic Court Suite 342\nDelbertville, OK 76370-8485",
+    contactNo: "01008297102",
+    carNo: "MH-02-JH-6714",
+    email: "prathameshedu@gmail.com ",
+    status: "Bought",
+  },
+  {
+    id: "inspection-3",
+    name: "Dr. Joany Dach",
+    address: "7029 Macejkovic Court Suite 342\nDelbertville, OK 76370-8485",
+    contactNo: "01008297102",
+    carNo: "MH-02-JH-6714",
+    email: "prathameshedu@gmail.com ",
+    status: "Bought",
+  },
+  {
+    id: "inspection-4",
+    name: "Jerel Harber",
+    address: "7029 Macejkovic Court Suite 342\nDelbertville, OK 76370-8485",
+    contactNo: "01008297102",
+    carNo: "MH-02-JH-6714",
+    email: "prathameshedu@gmail.com ",
+    status: "Bought",
+  },
+  {
+    id: "inspection-5",
+    name: "Miss Taya Abshire IV",
+    address: "7029 Macejkovic Court Suite 342\nDelbertville, OK 76370-8485",
+    contactNo: "01008297102",
+    carNo: "MH-02-JH-6714",
+    email: "prathameshedu@gmail.com ",
+    status: "Bought",
+  },
+  {
+    id: "inspection-6",
+    name: "Andrew Rau",
+    address: "7029 Macejkovic Court Suite 342\nDelbertville, OK 76370-8485",
+    contactNo: "01008297102",
+    carNo: "MH-02-JH-6714",
+    email: "prathameshedu@gmail.com ",
+    status: "Bought",
+  },
+  {
+    id: "inspection-7",
+    name: "Joey Kozey III",
+    address: "7029 Macejkovic Court Suite 342\nDelbertville, OK 76370-8485",
+    contactNo: "01008297102",
+    carNo: "MH-02-JH-6714",
+    email: "prathameshedu@gmail.com ",
+    status: "Bought",
+  },
+  {
+    id: "inspection-8",
+    name: "Sam Nolan",
+    address: "7029 Macejkovic Court Suite 342\nDelbertville, OK 76370-8485",
+    contactNo: "01008297102",
+    carNo: "MH-02-JH-6714",
+    email: "prathameshedu@gmail.com ",
+    status: "Bought",
+  },
+  {
+    id: "inspection-9",
+    name: "Aliza Wolff",
+    address: "7029 Macejkovic Court Suite 342\nDelbertville, OK 76370-8485",
+    contactNo: "01008297102",
+    carNo: "MH-02-JH-6714",
+    email: "prathameshedu@gmail.com ",
+    status: "Bought",
+  },
+  {
+    id: "inspection-10",
+    name: "Adolf Leuschke",
+    address: "7029 Macejkovic Court Suite 342\nDelbertville, OK 76370-8485",
+    contactNo: "01008297102",
+    carNo: "MH-02-JH-6714",
+    email: "prathameshedu@gmail.com ",
+    status: "Bought",
+  },
+];
+export const Bookings = [
+  {
+    id: "booking-1",
+    name: "Nicolette Schultz",
+    address: "2372 Bahringer Neck Suite 769\nPort Masonstad, SC 20111-3404",
+    contactNo: "01008297102",
+    carNo: "MH-02-JH-6714",
+    offer: "$1,00,000",
+    status: "Bought",
+  },
+];
+export const Query = [
+  {
+    id: "query-1",
+    name: "Nicolette Schultz",
+    message:
+      "B/108, Lilac CHS Jhangid Enclave, Kanakia Rd, near Raafae's Dastarkhwan, Laxmi Park, Mira Road, Maharashtra 401107",
+    contactNo: "01008297102",
+    date: "21/10/2021",
+  },
+  {
+    id: "query-2",
+    name: "Martina Torp",
+    message:
+      "B/108, Lilac CHS Jhangid Enclave, Kanakia Rd, near Raafae's Dastarkhwan, Laxmi Park, Mira Road, Maharashtra 401107",
+    contactNo: "01008297102",
+    date: "22/10/2021",
+  },
+];
+export const InventoryData = [
+  {
+    id: "inventorydata-1",
+    date: "21/10/2021",
+    carNo: "MH-02-JH-6714",
+    makeyear: "2019",
+    model: "Ford FC FWD",
+    carImage: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d",
+    address:
+      "B/108, Lilac CHS Jhangid Enclave, Kanakia Rd, near Raafae's Dastarkhwan, Laxmi Park, Mira Road, Maharashtra 401107",
+    status: "Bought",
+  },
+  {
+    id: "inventorydata-1",
+    date: "21/10/2021",
+    carNo: "MH-02-JH-6714",
+    carImage:
+      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2018-rolls-royce-phantom-1536152159.png",
+    makeyear: "2019",
+    model: "Ford FC FWD",
+    address:
+      "B/108, Lilac CHS Jhangid Enclave, Kanakia Rd, near Raafae's Dastarkhwan, Laxmi Park, Mira Road, Maharashtra 401107",
+    status: "Bought",
+  },
+];
