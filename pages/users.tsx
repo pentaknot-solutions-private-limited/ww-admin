@@ -37,7 +37,7 @@ export default function Users() {
     <Container maxWidth="lg">
       <section className="section-status">
         <div className="flex-container">
-          <h3 className="page-subtitle">Users</h3>
+          <h3 className="page-subtitle">Users({userList?.length})</h3>
           <h5 className="admin-name">{userData && userData?.firstName}</h5>
         </div>
         {userList && userList.length > 0 ? (
@@ -46,6 +46,7 @@ export default function Users() {
             disableclickable={true}
             userDatas={userList}
             headCells={InventoryHeadCell}
+            isPagination
           />
         ) : (
           <div className="no-data-available">

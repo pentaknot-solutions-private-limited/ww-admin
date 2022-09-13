@@ -44,6 +44,7 @@ interface tableParamTypes {
   headCells: any;
   parentPage?: any;
   disableclickable?: any;
+  isPagination?: boolean;
 }
 export default function UserDetailTabel({
   userDatas,
@@ -53,6 +54,7 @@ export default function UserDetailTabel({
   setImageReorder,
   parentPage,
   disableclickable,
+  isPagination,
 }: tableParamTypes) {
   // States
   const [page, setPage] = React.useState(0);
@@ -72,9 +74,28 @@ export default function UserDetailTabel({
   const emptyRows =
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - userDatas.length) : 0;
 
-  const rowPerPagePagination = inventoryOrdering
-    ? sortingTableWithCarOrder(filterFn.fn(userDatas))
-    : sortingTable(filterFn.fn(userDatas), getComparator(order, orderBy));
+  const PageOrderingAndPagination = () => {
+    if (inventoryOrdering) {
+      return sortingTableWithCarOrder(filterFn.fn(userDatas));
+    } else if (isPagination) {
+      return sortingTable(
+        filterFn.fn(userDatas),
+        getComparator(order, orderBy)
+      ).slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
+    } else {
+      return sortingTable(
+        filterFn.fn(userDatas),
+        getComparator(order, orderBy)
+      );
+    }
+  };
+
+  const rowPerPagePagination = PageOrderingAndPagination();
+
+  // const rowPerPagePagination = inventoryOrdering
+  //   ? sortingTableWithCarOrder(filterFn.fn(userDatas))
+  //   : sortingTable(filterFn.fn(userDatas), getComparator(order, orderBy));
+
   // rowsPerPage > 0
   //   ? sortingTable(
   //       filterFn.fn(userDatas),
@@ -512,26 +533,28 @@ export default function UserDetailTabel({
                 </TableBody>
               )}
             </Droppable>
-            {/* <StyledTableFooter>
-              <TableRow>
-                <TablePagination
-                  rowsPerPageOptions={[5, 6, 8, { label: "All", value: -1 }]}
-                  colSpan={9}
-                  count={userDatas.length}
-                  rowsPerPage={rowsPerPage}
-                  page={page}
-                  SelectProps={{
-                    inputProps: {
-                      "aria-label": "rows per page",
-                    },
-                    native: true,
-                  }}
-                  onPageChange={handleChangePage}
-                  onRowsPerPageChange={handleChangeRowsPerPage}
-                  ActionsComponent={TablePaginationActions}
-                />
-              </TableRow>
-            </StyledTableFooter> */}
+            {isPagination ? (
+              <StyledTableFooter>
+                <TableRow>
+                  <TablePagination
+                    rowsPerPageOptions={[5, 6, 8, { label: "All", value: -1 }]}
+                    colSpan={9}
+                    count={userDatas.length}
+                    rowsPerPage={rowsPerPage}
+                    page={page}
+                    SelectProps={{
+                      inputProps: {
+                        "aria-label": "rows per page",
+                      },
+                      native: true,
+                    }}
+                    onPageChange={handleChangePage}
+                    onRowsPerPageChange={handleChangeRowsPerPage}
+                    ActionsComponent={TablePaginationActions}
+                  />
+                </TableRow>
+              </StyledTableFooter>
+            ) : null}
           </Table>
         </DragDropContext>
       </StyledTableContainer>
