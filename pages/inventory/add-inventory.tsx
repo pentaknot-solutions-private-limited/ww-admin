@@ -1,4 +1,7 @@
-import { DatePicker, LocalizationProvider } from "@mui/lab";
+import {
+  LocalizationProvider,
+  DatePicker,
+} from "@mui/x-date-pickers";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import Alert from "@mui/lab/Alert";
 import {

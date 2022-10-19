@@ -26,12 +26,12 @@ import { InventoryService } from "../../src/service/inventory-service";
 import { useRouter } from "next/router";
 import UploadIcon from "../../public/upload-icon.svg";
 import LoadingContext from "../../src/context/loading";
-import { DatePicker, LocalizationProvider } from "@mui/lab";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import { CarService } from "../../src/service/cars";
 import moment from "moment";
 import { userJwtData } from "../../src/utils/jwt";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+import { LocalizationProvider,DatePicker } from "@mui/x-date-pickers";
 
 export default function InspectionDetail() {
   // States

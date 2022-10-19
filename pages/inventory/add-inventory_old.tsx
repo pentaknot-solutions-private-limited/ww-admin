@@ -25,7 +25,7 @@ import { useRouter } from "next/router";
 import UploadIcon from "../../public/upload-icon.svg";
 import DatePicker from "@mui/lab/DatePicker";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
+import { LocalizationProvider } from "@mui/x-date-pickers";
 import { CarService } from "../../src/service/cars";
 import LoadingContext from "../../src/context/loading";
 import moment from "moment";
