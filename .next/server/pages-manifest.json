@@ -1,6 +1,23 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
+  "/api/hello": "pages/api/hello.js",
+  "/booking/[id]": "pages/booking/[id].html",
+  "/content/content-address-component": "pages/content/content-address-component.html",
+  "/content/content-city-component": "pages/content/content-city-component.html",
+  "/content/content-email-component": "pages/content/content-email-component.html",
+  "/content/content-phone-component": "pages/content/content-phone-component.html",
+  "/content/content-social-component": "pages/content/content-social-component.html",
+  "/content": "pages/content.html",
+  "/": "pages/index.html",
+  "/inspection/[id]": "pages/inspection/[id].html",
+  "/inventory/[id]": "pages/inventory/[id].html",
+  "/inventory/add-inventory": "pages/inventory/add-inventory.html",
+  "/inventory": "pages/inventory.html",
+  "/login": "pages/login.html",
+  "/query/[id]": "pages/query/[id].html",
+  "/test": "pages/test.html",
+  "/users": "pages/users.html",
   "/_error": "pages/_error.js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html"
 }
