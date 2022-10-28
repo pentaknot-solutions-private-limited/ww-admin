@@ -6,7 +6,7 @@
       "args": "start",
       "cwd": "./",
       "instances": "max",
-      "exec_mode": "fork"
+      "exec_mode": "cluster"
     }
   ]
 }
