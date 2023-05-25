@@ -177,6 +177,7 @@ export default function Login() {
                 <div>
                   <h4>Login</h4>
                   <Formik
+                    enableReinitialize
                     initialValues={initialValues}
                     validationSchema={validationSchema1}
                     onSubmit={handleSubmit}

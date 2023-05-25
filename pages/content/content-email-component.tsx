@@ -105,6 +105,7 @@ export default function ContentEmailComponent() {
       <div className="content-page-section">
         {adminData && (
           <Formik
+            enableReinitialize
             initialValues={initialValues}
             validationSchema={validataion}
             onSubmit={HandleSubmit}

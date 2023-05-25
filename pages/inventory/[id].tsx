@@ -31,7 +31,7 @@ import { CarService } from "../../src/service/cars";
 import moment from "moment";
 import { userJwtData } from "../../src/utils/jwt";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import { LocalizationProvider,DatePicker } from "@mui/x-date-pickers";
+import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 
 export default function InspectionDetail() {
   // States
@@ -364,6 +364,7 @@ export default function InspectionDetail() {
         <div className="site-card">
           {inventoryData && (
             <Formik
+              enableReinitialize
               initialValues={initialValues}
               // validationSchema={validationSchema}
               onSubmit={handleSubmit}

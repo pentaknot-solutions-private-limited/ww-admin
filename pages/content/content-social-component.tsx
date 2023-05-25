@@ -157,6 +157,7 @@ export default function ContentSocialLinkComponent() {
       <div className="content-page-section">
         {socialData && (
           <Formik
+            enableReinitialize
             initialValues={initialValues}
             validationSchema={validataion}
             onSubmit={facebookHandleSubmit}
@@ -194,6 +195,7 @@ export default function ContentSocialLinkComponent() {
       <div className="content-page-section">
         {socialData && (
           <Formik
+            enableReinitialize
             initialValues={initialValues}
             validationSchema={validataion}
             onSubmit={instagramHandleSubmit}
@@ -231,6 +233,7 @@ export default function ContentSocialLinkComponent() {
       <div className="content-page-section">
         {socialData && (
           <Formik
+            enableReinitialize
             initialValues={initialValues}
             validationSchema={validataion}
             onSubmit={youtubeHandleSubmit}

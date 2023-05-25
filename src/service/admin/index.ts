@@ -37,7 +37,10 @@ export class AdminService {
 
   // Get All user list
 
-  getAllUserList(){
-    return axiosInstance.get('admin/getAll/User');
+  getAllUserList() {
+    return axiosInstance.get("admin/getAll/User");
+  }
+  getWebsiteStats() {
+    return axiosInstance.get("admin/getAll/User");
   }
 }

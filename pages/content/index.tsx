@@ -13,6 +13,7 @@ import ContentCityComponent from "./content-city-component";
 import ContentEmailComponent from "./content-email-component";
 import ContentPhoneComponent from "./content-phone-component";
 import ContentSocialLinkComponent from "./content-social-component";
+import ContentWebsiteStatsComponent from "./content-website-stats-component";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -224,6 +225,7 @@ export default function Content() {
           <div className="site-card">
             <h5>Website</h5>
             <ContentCityComponent />
+            <ContentWebsiteStatsComponent />
             <ContentEmailComponent />
             <ContentPhoneComponent />
             <ContentAddressComponent />

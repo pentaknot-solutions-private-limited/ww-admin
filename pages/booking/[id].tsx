@@ -613,6 +613,7 @@ export default function InspectionDetail() {
           </CommentDrawerHeader>
           <div className="add-comment">
             <Formik
+              enableReinitialize
               initialValues={initialValues}
               onSubmit={addNewComment}
               validationSchema={validationSchema}

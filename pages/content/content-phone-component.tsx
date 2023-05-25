@@ -100,6 +100,7 @@ export default function ContentPhoneComponent() {
       <div className="content-page-section">
         {adminData && (
           <Formik
+            enableReinitialize
             initialValues={initialValues}
             validationSchema={validataion}
             onSubmit={HandleSubmit}

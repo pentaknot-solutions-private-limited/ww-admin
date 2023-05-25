@@ -1,7 +1,4 @@
-import {
-  LocalizationProvider,
-  DatePicker,
-} from "@mui/x-date-pickers";
+import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import Alert from "@mui/lab/Alert";
 import {
@@ -330,6 +327,7 @@ export default function AddInventory() {
           <div className="site-card">
             <React.Fragment>
               <Formik
+                enableReinitialize
                 initialValues={initialValues}
                 // validationSchema={validationSchema}
                 onSubmit={handleSubmit}
