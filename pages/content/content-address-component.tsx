@@ -36,7 +36,6 @@ export default function ContentAddressComponent() {
   const HandleSubmit = async (values: any) => {
     setLoading(true);
     setFormLoading(true);
-    console.log(values);
     const payload = {
       address: values.address,
     };
@@ -45,7 +44,6 @@ export default function ContentAddressComponent() {
         payload
       );
       if (!updateAdminDataApiCall.data.error) {
-        console.log(updateAdminDataApiCall.data.data);
         setFormLoading(false);
         setAddressUpdateSuccess(true);
         setLoading(false);

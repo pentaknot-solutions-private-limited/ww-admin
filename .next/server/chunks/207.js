@@ -51,14 +51,12 @@ function ContentAddressComponent() {
     const HandleSubmit = async (values)=>{
         setLoading(true);
         setFormLoading(true);
-        console.log(values);
         const payload = {
             address: values.address
         };
         try {
             const updateAdminDataApiCall = await adminService.updateAdminData(payload);
             if (!updateAdminDataApiCall.data.error) {
-                console.log(updateAdminDataApiCall.data.data);
                 setFormLoading(false);
                 setAddressUpdateSuccess(true);
                 setLoading(false);

@@ -54,7 +54,6 @@ export default function InspectionDetail() {
       const queryByIdApiCall = await overviewService.getQueryById(payload);
 
       if (!queryByIdApiCall.data.error) {
-        // console.log(queryByIdApiCall.data.data);
         setQueryData(queryByIdApiCall.data.data);
         setLoading(false);
       }

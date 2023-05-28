@@ -44,7 +44,6 @@ export default function ContentSocialLinkComponent() {
         facebookPayload
       );
       if (!faceBookUpdateApiCall.data.error) {
-        console.log(faceBookUpdateApiCall.data.data);
         setFormLoading(false);
         setSocialLinkUpdate(true);
       } else {
@@ -72,7 +71,6 @@ export default function ContentSocialLinkComponent() {
         instagramPayload
       );
       if (!instagramUpdateApiCall.data.error) {
-        console.log(instagramUpdateApiCall.data.data);
         setFormLoading(false);
         setSocialLinkUpdate(true);
       } else {
@@ -100,7 +98,6 @@ export default function ContentSocialLinkComponent() {
         youtubePayload
       );
       if (!youtubeUpdateApiCall.data.error) {
-        console.log(youtubeUpdateApiCall.data.data);
         setFormLoading(false);
         setSocialLinkUpdate(true);
       } else {
@@ -129,7 +126,6 @@ export default function ContentSocialLinkComponent() {
       const socialDataApiCall = await adminService.getSocialLink();
       if (!socialDataApiCall.data.error) {
         setSocialData(socialDataApiCall.data.data);
-        console.log(socialDataApiCall.data.data);
         setLoading(false);
       } else {
         console.log(socialDataApiCall.data.error);

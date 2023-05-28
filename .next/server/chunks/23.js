@@ -495,7 +495,6 @@ function UserDetailTabel({ userDatas , headCells , inventoryOrdering , setUserDa
             } else {
                 dynamicPath = item._id;
             }
-            console.log(dynamicPath);
             router.push({
                 pathname: `/${parentPage}/${dynamicPath}`
             });
@@ -505,10 +504,8 @@ function UserDetailTabel({ userDatas , headCells , inventoryOrdering , setUserDa
         switch(actionCase){
             case "deleteInventoryCar":
                 setLoading(true);
-                console.log("deleting...  the car" + id);
                 if (confirm("Are you sure you really want to delete this car!") == true) {
                     axiosInstance/* default.post */.Z.post(`/car/delete/${id}`).then((res)=>{
-                        console.log(res.data);
                         setLoading(false);
                         setRefreshData(res);
                     }).catch((error)=>{
@@ -531,16 +528,9 @@ function UserDetailTabel({ userDatas , headCells , inventoryOrdering , setUserDa
         // let orderListData = tempData.map((item: any, index: number) => {
         //   item.Car_Detail.carOrder = index;
         // });
-        // console.log(tempData, orderListData);
         setImageReorder(tempData);
-        console.log(tempData);
     };
     // Effects
-    (0,external_react_.useEffect)(()=>{
-    // console.log(userDatas);
-    }, [
-        userDatas
-    ]);
     return(/*#__PURE__*/ jsx_runtime_.jsx(material_.Box, {
         className: "table-wrapper",
         sx: {

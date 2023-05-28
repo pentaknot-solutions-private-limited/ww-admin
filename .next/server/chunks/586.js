@@ -60,7 +60,6 @@ function ContentSocialLinkComponent() {
         try {
             const faceBookUpdateApiCall = await adminService.updateFacebookLink(facebookPayload);
             if (!faceBookUpdateApiCall.data.error) {
-                console.log(faceBookUpdateApiCall.data.data);
                 setFormLoading(false);
                 setSocialLinkUpdate(true);
             } else {
@@ -85,7 +84,6 @@ function ContentSocialLinkComponent() {
         try {
             const instagramUpdateApiCall = await adminService.updateInstagramLink(instagramPayload);
             if (!instagramUpdateApiCall.data.error) {
-                console.log(instagramUpdateApiCall.data.data);
                 setFormLoading(false);
                 setSocialLinkUpdate(true);
             } else {
@@ -110,7 +108,6 @@ function ContentSocialLinkComponent() {
         try {
             const youtubeUpdateApiCall = await adminService.updateYoutubeLink(youtubePayload);
             if (!youtubeUpdateApiCall.data.error) {
-                console.log(youtubeUpdateApiCall.data.data);
                 setFormLoading(false);
                 setSocialLinkUpdate(true);
             } else {
@@ -137,7 +134,6 @@ function ContentSocialLinkComponent() {
             const socialDataApiCall = await adminService.getSocialLink();
             if (!socialDataApiCall.data.error) {
                 setSocialData(socialDataApiCall.data.data);
-                console.log(socialDataApiCall.data.data);
                 setLoading(false);
             } else {
                 console.log(socialDataApiCall.data.error);

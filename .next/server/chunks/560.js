@@ -57,7 +57,6 @@ function ContentWebsiteStatsComponent() {
         try {
             const updateAdminDataApiCall = await adminService.updateAdminData(payload);
             if (!updateAdminDataApiCall.data.error) {
-                console.log(updateAdminDataApiCall.data.data);
                 setFormLoading(false);
                 setCustomersServedUpdateSuccess(true);
                 setLoading(false);

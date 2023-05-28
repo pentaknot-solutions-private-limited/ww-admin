@@ -10,7 +10,6 @@ export default function Test() {
 
   // Functions
   const handleChange = (e: any) => {
-    console.log(e.target.files);
     setFiles(e.target.files);
   };
 
@@ -25,7 +24,6 @@ export default function Test() {
     try {
       const apiCall = await inventoryService.uploadCarImage(formData);
       if (!apiCall.data.error) {
-        console.log(apiCall.data.data);
       } else {
         console.log(apiCall.data.error);
       }

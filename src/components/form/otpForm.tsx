@@ -8,10 +8,6 @@ export default function OtpForm(props: any) {
       elmnt.target.value = elmnt.target.value.slice(0, elmnt.target.maxLength);
   };
   const inputfocus = (elmnt: any) => {
-    // if (elmnt.target.value != '') {
-    //     console.log(elmnt);
-
-    // }
     if (elmnt.key === "Delete" || elmnt.key === "Backspace") {
       const next = elmnt.target.tabIndex - 2;
       if (next > -1) {

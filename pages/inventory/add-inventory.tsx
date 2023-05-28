@@ -96,13 +96,11 @@ export default function AddInventory() {
         roleId: "617adebb2c17ccbd23fe474f",
       };
     }
-    console.log(payload);
     if (activeStep == 0) {
       setLoading(true);
       try {
         const addCarData = await carService.addCarInventory(payload);
         if (!addCarData.data.error) {
-          console.log(addCarData.data.data);
           setCarId(addCarData.data.data);
           setActiveStep((prevActiveStep: any) => prevActiveStep + 1);
           resetForm();
@@ -142,7 +140,6 @@ export default function AddInventory() {
       return imageItem;
     });
     setImages(item);
-    console.log(images);
   };
 
   const updateCarImageById = async (payload: any) => {
@@ -187,12 +184,10 @@ export default function AddInventory() {
   };
   // Delete carImage by Id
   const deleteImageById = async (imageid: any, index?: any) => {
-    console.log(images);
     setLoading(true);
     try {
       const deleteImage = await carService.deleteCarImageById(imageid);
       if (!deleteImage.data.error) {
-        console.log(images);
         setLoading(false);
         refreshApi();
       } else {
@@ -213,7 +208,6 @@ export default function AddInventory() {
       );
 
       if (!inventoryByIdApiCall.data.error) {
-        console.log(inventoryByIdApiCall.data.data);
         setImages(inventoryByIdApiCall.data.data[0].Car_Images);
         setLoading(false);
       } else {
@@ -235,7 +229,6 @@ export default function AddInventory() {
         payloadData
       );
       if (!updateOrder?.data.error) {
-        console.log(updateOrder?.data.data);
         setLoading(false);
         // setActiveStep((prevActiveStep: any) => prevActiveStep + 1);
       } else {

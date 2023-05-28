@@ -203,7 +203,6 @@ export default function UserDetailTabel({
       } else {
         dynamicPath = item._id;
       }
-      console.log(dynamicPath);
       router.push({
         pathname: `/${parentPage}/${dynamicPath}`,
       });
@@ -214,14 +213,12 @@ export default function UserDetailTabel({
     switch (actionCase) {
       case "deleteInventoryCar":
         setLoading(true);
-        console.log("deleting...  the car" + id);
         if (
           confirm("Are you sure you really want to delete this car!") == true
         ) {
           axiosInstance
             .post(`/car/delete/${id}`)
             .then((res: any) => {
-              console.log(res.data);
               setLoading(false);
               setRefreshData(res);
             })
@@ -247,14 +244,9 @@ export default function UserDetailTabel({
     // let orderListData = tempData.map((item: any, index: number) => {
     //   item.Car_Detail.carOrder = index;
     // });
-    // console.log(tempData, orderListData);
     setImageReorder(tempData);
-    console.log(tempData);
   };
   // Effects
-  useEffect(() => {
-    // console.log(userDatas);
-  }, [userDatas]);
 
   return (
     <Box

@@ -59,7 +59,6 @@ export default function InspectionDetail() {
       if (!getInspectionByIdApiCall.data.error) {
         setInspectionData(getInspectionByIdApiCall.data.data);
         setLoading(false);
-        // console.log(getInspectionByIdApiCall.data.data);
       } else {
         console.log(getInspectionByIdApiCall.data.error);
         setLoading(false);

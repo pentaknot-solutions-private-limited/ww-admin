@@ -43,7 +43,6 @@ export default function ContentWebsiteStatsComponent() {
         payload
       );
       if (!updateAdminDataApiCall.data.error) {
-        console.log(updateAdminDataApiCall.data.data);
         setFormLoading(false);
         setCustomersServedUpdateSuccess(true);
         setLoading(false);

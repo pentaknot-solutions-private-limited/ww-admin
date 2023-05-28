@@ -61,7 +61,6 @@ export default function Users() {
       const getUserListApi = await adminService.getAllUserList();
       if (!getUserListApi.data.error) {
         setUserList(getUserListApi.data.data);
-        console.log(getUserListApi.data.data);
       }
     } catch (error) {}
   };

@@ -160,10 +160,8 @@ export default function InspectionDetail() {
         //   inventoryByIdApiCall.data.data[0].Car_Equipments[0].equipmentName
         // );
 
-        // console.log(inventoryByIdApiCall.data.data);
         setLoading(false);
       } else {
-        // console.log(inventoryByIdApiCall.data.error);
         setLoading(false);
       }
     } catch (error) {
@@ -259,12 +257,10 @@ export default function InspectionDetail() {
 
   // Delete carImage by Id
   const deleteImageById = async (imageid: any, index?: any) => {
-    console.log(carImage);
     setLoading(true);
     try {
       const deleteImage = await carService.deleteCarImageById(imageid);
       if (!deleteImage.data.error) {
-        console.log(carImage);
         setLoading(false);
         refreshApi();
       }
@@ -302,7 +298,6 @@ export default function InspectionDetail() {
       return imageItem;
     });
     setCarImages(item);
-    console.log(carImage);
   };
 
   const updateImageOrder = async (carId: any, payload: any) => {
@@ -316,7 +311,6 @@ export default function InspectionDetail() {
         payloadData
       );
       if (!updateOrder?.data.error) {
-        console.log(updateOrder?.data.data);
       } else {
         console.log(updateOrder?.data.error);
       }

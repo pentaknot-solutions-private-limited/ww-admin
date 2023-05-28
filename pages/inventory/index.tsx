@@ -84,7 +84,6 @@ export default function Inventory() {
   useEffect(() => {
     if (refreshData) {
       refreshApi();
-      console.log("This is refresh api of the inventory data");
     }
   }, [refreshData]);
 

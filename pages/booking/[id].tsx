@@ -102,7 +102,6 @@ export default function InspectionDetail() {
     try {
       const bookingApiData = await overviewService?.getBookingById(payload);
       if (!bookingApiData.data.error) {
-        console.log(bookingApiData.data.data);
         setBookingData(bookingApiData.data.data);
         setLoading(false);
       } else {
@@ -124,7 +123,6 @@ export default function InspectionDetail() {
         setCommentList(allComment.data.data);
         setLoading(false);
       } else {
-        console.log(allComment.data.data);
         setLoading(false);
       }
     } catch (error) {
@@ -163,7 +161,6 @@ export default function InspectionDetail() {
       const cityListApiCall = await carService.getCityList();
       if (!cityListApiCall.data.error) {
         setAllCity(cityListApiCall.data.data);
-        console.log(cityListApiCall.data.data);
         setLoading(false);
       } else {
         console.log(cityListApiCall.data.error);

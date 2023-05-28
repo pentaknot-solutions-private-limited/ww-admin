@@ -35,7 +35,6 @@ export default function ContentEmailComponent() {
   const HandleSubmit = async (values: any) => {
     setLoading(true);
     setFormLoading(true);
-    console.log(values);
     const payload = {
       emailId: values.email,
     };
@@ -44,7 +43,6 @@ export default function ContentEmailComponent() {
         payload
       );
       if (!updateAdminDataApiCall.data.error) {
-        console.log(updateAdminDataApiCall.data.data);
         setFormLoading(false);
         setEmailUpdateSuccess(true);
         setLoading(false);

@@ -175,7 +175,6 @@ const Home: NextPage = () => {
     try {
       const queryDataApiCall = await overviewService.getQuerys();
       if (!queryDataApiCall.data.error) {
-        console.log(queryDataApiCall.data.data);
         let data = queryDataApiCall?.data?.data?.map((item: any) => ({
           ...item,
           userName: item?.name

@@ -35,7 +35,6 @@ export default function ContentPhoneComponent() {
   const HandleSubmit = async (values: any) => {
     setLoading(true);
     setFormLoading(true);
-    console.log(values);
     const payload = {
       contactNo: values.phone,
     };
@@ -44,7 +43,6 @@ export default function ContentPhoneComponent() {
         payload
       );
       if (!updateAdminDataApiCall.data.error) {
-        console.log(updateAdminDataApiCall.data.data);
         setFormLoading(false);
         setPhoneUpdateSuccess(true);
       } else {

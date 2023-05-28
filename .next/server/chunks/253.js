@@ -50,7 +50,6 @@ function ContentCityComponent() {
         try {
             const addCityApiCall = await carService.addCity(payload);
             if (!addCityApiCall.data.error) {
-                console.log(addCityApiCall.data.data);
                 setFormLoading(false);
                 resetForm();
                 setLoading(false);
@@ -90,10 +89,8 @@ function ContentCityComponent() {
             const cityListApiCall = await carService.getCityList();
             if (!cityListApiCall.data.error) {
                 setAllCity(cityListApiCall.data.data);
-                console.log(cityListApiCall.data.data);
                 setLoading(false);
             } else {
-                console.log(cityListApiCall.data.error);
                 setLoading(false);
             }
         } catch (error) {
@@ -107,7 +104,6 @@ function ContentCityComponent() {
         try {
             const deleteCityApiCall = await carService.deleteCityById(payload);
             if (!deleteCityApiCall.data.error) {
-                console.log(deleteCityApiCall.data.data);
                 setLoading(false);
             } else {
                 console.log(deleteCityApiCall.data.error);

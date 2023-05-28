@@ -59,7 +59,6 @@ export default function Content() {
     try {
       const addBrandApiCall = await carService.addBrand(payload);
       if (!addBrandApiCall.data.error) {
-        console.log(addBrandApiCall.data.data);
         resetForm();
         refreshApi();
         setLoading(false);
@@ -82,7 +81,6 @@ export default function Content() {
     try {
       const allBrandsApiCall = await carService.allBrands();
       if (!allBrandsApiCall.data.error) {
-        console.log(allBrandsApiCall.data.data);
         setAllBrands(allBrandsApiCall.data.data);
         setFormLoading(false);
         setLoading(false);
@@ -113,7 +111,6 @@ export default function Content() {
     try {
       const deleteBrandApiCall = await carService.deleteBrands(payload);
       if (!deleteBrandApiCall.data.error) {
-        console.log(deleteBrandApiCall.data.data);
         setLoading(false);
       } else {
         console.log(deleteBrandApiCall.data.error);
