@@ -12,6 +12,23 @@ export const SecondaryButton = styled(Button)`
     padding: 5px 10px;
   }
 `;
+export const TertiaryButton = styled(Button)`
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: none;
+  background-color: rgb(249, 249, 249);
+  &:hover {
+    background-color: rgb(237, 237, 238);
+    box-shadow: none;
+  }
+  border: 1px solid rgb(194, 194, 194);
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.87);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 5px 10px;
+  height: 30px;
+`;
 
 export const StyledTextField = styled(TextField)`
   background: rgba(33, 33, 33, 0.08);

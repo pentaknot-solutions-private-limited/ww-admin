@@ -36,6 +36,9 @@ export class OverviewService {
   getQuerys() {
     return axiosInstance.get(`/contact`);
   }
+  getContactUsLeads() {
+    return axiosInstance.get(`/contact-leads`);
+  }
 
   // Get Query by Id
   getQueryById(payload: any) {

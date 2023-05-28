@@ -10,6 +10,7 @@ import {
   Box,
   TablePagination,
   TableSortLabel,
+  useMediaQuery,
 } from "@mui/material";
 import {
   StyledTableContainer,
@@ -35,6 +36,8 @@ import LoadingContext from "../../context/loading";
 import RefreshAPiContext from "../../context/refreshApi";
 import TrashIcon from "../../../public/trash.svg";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+import { visuallyHidden } from "@mui/utils";
+import { SecondaryButton, TertiaryButton } from "../GlobalElement";
 
 interface tableParamTypes {
   userDatas: any;
@@ -45,6 +48,12 @@ interface tableParamTypes {
   parentPage?: any;
   disableclickable?: any;
   isPagination?: boolean;
+  onGridHeaderBtnClicked?: (args: any) => void;
+  gridOptions?: {
+    type: "search" | "button";
+    label?: string;
+    operation?: string;
+  }[];
 }
 export default function UserDetailTabel({
   userDatas,
@@ -55,7 +64,11 @@ export default function UserDetailTabel({
   parentPage,
   disableclickable,
   isPagination,
+  gridOptions,
+  onGridHeaderBtnClicked,
 }: tableParamTypes) {
+  // Variables
+  const matches567px = useMediaQuery("(max-width:576px)");
   // States
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -244,14 +257,71 @@ export default function UserDetailTabel({
   }, [userDatas]);
 
   return (
-    <div className="table-wrapper">
+    <Box
+      className="table-wrapper"
+      sx={{ position: "relative", paddingTop: matches567px ? "100px" : "69px" }}
+    >
       {/* <SearchInput/> */}
 
       <StyledTableContainer>
+        <Box
+          sx={{
+            display: matches567px ? "block" : "flex",
+            alignItems: "center",
+            background: "#fff",
+            position: "absolute",
+            justifyContent: "end",
+            top: "0",
+            left: "0",
+            right: "0",
+            border: "1px solid rgba(224, 224, 224, 1)",
+            borderRadius: "4px 4px 0px 0px",
+            padding: "16px",
+          }}
+        >
+          <Box sx={{ marginBottom: matches567px ? "8px" : "0px" }}>
+            <SearchWrapper>
+              <Search>
+                <SearchIconWrapper>
+                  <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase
+                  placeholder="Search…"
+                  inputProps={{ "aria-label": "search" }}
+                  onChange={searchHandleChange}
+                />
+              </Search>
+            </SearchWrapper>
+          </Box>
+          {gridOptions?.length &&
+            gridOptions?.map((item) => {
+              if (item.type === "button") {
+                return (
+                  <Box
+                    sx={{
+                      textAlign: matches567px ? "right" : "left",
+                      marginLeft: "8px",
+                    }}
+                  >
+                    <TertiaryButton
+                      variant="contained"
+                      color="secondary"
+                      onClick={() => {
+                        onGridHeaderBtnClicked &&
+                          onGridHeaderBtnClicked(item?.operation);
+                      }}
+                    >
+                      {item?.label}
+                    </TertiaryButton>
+                  </Box>
+                );
+              }
+            })}
+        </Box>
         <DragDropContext onDragEnd={onDragEnd}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
-              <TableRow>
+              {/* <TableRow>
                 <StyledTableCell colSpan={9}>
                   <SearchWrapper>
                     <Search>
@@ -266,14 +336,17 @@ export default function UserDetailTabel({
                     </Search>
                   </SearchWrapper>
                 </StyledTableCell>
-              </TableRow>
+              </TableRow> */}
               <TableRow>
                 {headCells.map(
                   (
                     { id, name, disabledSorting, onClickAction }: any,
                     index: any
                   ) => (
-                    <StyledTableCell key={`tabelhead-${index}`}>
+                    <StyledTableCell
+                      sortDirection={orderBy === id ? order : false}
+                      key={`tabelhead-${index}`}
+                    >
                       {disabledSorting ? (
                         name
                       ) : (
@@ -404,23 +477,7 @@ export default function UserDetailTabel({
                                             "lastName"
                                           ].substring(1))}
                                 </TableCell>
-                              ) : id == "userContactNo" ? (
-                                <TableCell
-                                  sx={{ whiteSpace: "nowrap" }}
-                                  key={`tabelcell-${key}`}
-                                >
-                                  {userData["User"] &&
-                                    userData["User"]["phoneNumber"]}
-                                </TableCell>
-                              ) : id == "userEmail" ? (
-                                <TableCell
-                                  sx={{ whiteSpace: "nowrap" }}
-                                  key={`tabelcell-${key}`}
-                                >
-                                  {userData["User"] &&
-                                    userData["User"]["emailId"]}
-                                </TableCell>
-                              ) : id == "Brand" ? (
+                              ) : id == "brand" ? (
                                 <TableCell
                                   sx={{ whiteSpace: "nowrap" }}
                                   key={`tabelcell-${key}`}
@@ -558,6 +615,6 @@ export default function UserDetailTabel({
           </Table>
         </DragDropContext>
       </StyledTableContainer>
-    </div>
+    </Box>
   );
 }

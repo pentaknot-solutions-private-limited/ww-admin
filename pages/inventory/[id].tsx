@@ -86,7 +86,7 @@ export default function InspectionDetail() {
 
   const validationSchema = Yup.object({
     carName: Yup.string().required("This field can't be blank"),
-    carNumber: Yup.string().required("This field can't be blank"),
+    carNumber: Yup.string(),
     color: Yup.string().required("This field can't be blank"),
     fuelType: Yup.string().required("This field can't be blank"),
     kmDriven: Yup.string().required("This field can't be blank"),
@@ -397,20 +397,7 @@ export default function InspectionDetail() {
                         fullWidth
                       />
                     </Grid>
-                    {/* <Grid item xs={12} sm={6} md={3}>
-                      <StyledTextField
-                        name="carNumber"
-                        label="Car Number"
-                        value={props.values.carNumber}
-                        onChange={props.handleChange}
-                        InputProps={{
-                          readOnly: edit,
-                        }}
-                        disabled={edit}
-                        variant="outlined"
-                        fullWidth
-                      />
-                    </Grid> */}
+
                     <Grid item xs={12} sm={6} md={3}>
                       <StyledTextField
                         name="color"
@@ -681,6 +668,20 @@ export default function InspectionDetail() {
                       <span className="error">
                         {props.touched.carBodyId && props.errors.carBodyId}
                       </span>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={3}>
+                      <StyledTextField
+                        name="carNumber"
+                        label="Car Number"
+                        value={props.values.carNumber}
+                        onChange={props.handleChange}
+                        InputProps={{
+                          readOnly: edit,
+                        }}
+                        disabled={edit}
+                        variant="outlined"
+                        fullWidth
+                      />
                     </Grid>
                   </Grid>
                   <h5>Additional Feature</h5>

@@ -20,6 +20,7 @@
     "@mui/x-date-pickers": "^5.0.4",
     "axios": "^0.26.0",
     "dayjs": "^1.10.8",
+    "file-saver": "^2.0.5",
     "formik": "^2.2.9",
     "jwt-decode": "^3.1.2",
     "moment": "^2.29.1",
@@ -32,9 +33,11 @@
     "react-slick": "^0.28.1",
     "reactstrap": "^9.0.1",
     "slick-carousel": "^1.8.1",
+    "xlsx": "^0.18.5",
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@types/file-saver": "^2.0.5",
     "@types/node": "16.11.10",
     "@types/react": "17.0.37",
     "@types/react-beautiful-dnd": "^13.1.2",

@@ -55,6 +55,9 @@ class OverviewService {
     getQuerys() {
         return _utils_axiosInstance__WEBPACK_IMPORTED_MODULE_0__/* ["default"].get */ .Z.get(`/contact`);
     }
+    getContactUsLeads() {
+        return _utils_axiosInstance__WEBPACK_IMPORTED_MODULE_0__/* ["default"].get */ .Z.get(`/contact-leads`);
+    }
     // Get Query by Id
     getQueryById(payload2) {
         return _utils_axiosInstance__WEBPACK_IMPORTED_MODULE_0__/* ["default"].get */ .Z.get(`/contact/${payload2}`);

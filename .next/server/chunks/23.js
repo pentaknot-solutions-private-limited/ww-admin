@@ -36,51 +36,51 @@ var TableCell_ = __webpack_require__(5612);
 
 
 
-const SearchWrapper = (0,styles_.styled)('div')(({ theme  })=>({
-        display: 'flex',
-        alignItems: 'end',
-        width: '100%',
-        maxWidth: '300px',
-        margin: '0 0 0 auto',
-        fontFamily: 'SF Compact Display'
+const SearchWrapper = (0,styles_.styled)("div")(({ theme  })=>({
+        display: "block",
+        width: "100%",
+        maxWidth: "300px",
+        margin: "0 0 0 auto",
+        fontFamily: "SF Compact Display",
+        background: "#fff"
     })
 );
-const Search = (0,styles_.styled)('div')(({ theme  })=>({
-        position: 'relative',
+const Search = (0,styles_.styled)("div")(({ theme  })=>({
+        position: "relative",
         borderRadius: theme.shape.borderRadius,
-        backgroundColor: 'rgba(33, 33, 33, 0.08);',
-        width: '100%',
-        fontFamily: 'SF Compact Display'
+        backgroundColor: "rgba(33, 33, 33, 0.08);",
+        width: "100%",
+        fontFamily: "SF Compact Display"
     })
 );
-const SearchIconWrapper = (0,styles_.styled)('div')(({ theme  })=>({
+const SearchIconWrapper = (0,styles_.styled)("div")(({ theme  })=>({
         padding: theme.spacing(0, 2),
-        height: '100%',
-        position: 'absolute',
-        pointerEvents: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        fontFamily: 'SF Compact Display'
+        height: "100%",
+        position: "absolute",
+        pointerEvents: "none",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontFamily: "SF Compact Display"
     })
 );
 const StyledInputBase = (0,styles_.styled)((InputBase_default()))(({ theme  })=>({
-        color: 'inherit',
-        '& .MuiInputBase-input': {
+        color: "inherit",
+        "& .MuiInputBase-input": {
             padding: theme.spacing(1, 1, 1, 0),
             paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-            transition: theme.transitions.create('width'),
-            fontFamily: 'SF Compact Display',
-            width: '100%',
-            [theme.breakpoints.up('md')]: {
-                width: '20ch'
+            transition: theme.transitions.create("width"),
+            fontFamily: "SF Compact Display",
+            width: "100%",
+            [theme.breakpoints.up("md")]: {
+                width: "20ch"
             }
         }
     })
 );
 const LayoutWrapper = (0,styles_.styled)((Box_default()))(({ theme  })=>({
         display: "flex",
-        fontFamily: 'SF Compact Display',
+        fontFamily: "SF Compact Display",
         "@media (max-width: 1200px)": {
             display: "block"
         }
@@ -91,7 +91,7 @@ const WrapperContainer = (/* unused pure expression or super */ null && (styled(
   background: #fffef5;
   width: 100%;
   height: 100vh;
-  font-family:'SF Compact Display';
+  font-family: "SF Compact Display";
   @media screen and (max-width: 1200px) {
     padding: 20px 20px 20px 100px;
   }
@@ -102,7 +102,7 @@ const TextwrapperContainer = (/* unused pure expression or super */ null && (sty
   align-items: center;
   max-width: 1300px;
   margin: 0 auto;
-  font-family:'SF Compact Display';
+  font-family: "SF Compact Display";
 `));
 const DashboardCard = (/* unused pure expression or super */ null && (styled(Box)`
   padding: 30px 24px;
@@ -114,16 +114,16 @@ const DashboardCard = (/* unused pure expression or super */ null && (styled(Box
   align-items: center;
   width: 100%;
   max-width: 366px;
-  font-family:'SF Compact Display';
+  font-family: "SF Compact Display";
   :not(:last-child) {
     margin-right: 30px;
   }
 `));
 const StyledTableContainer = (0,styles_.styled)(material_.TableContainer)(({ theme  })=>({
         border: "1px solid rgba(224, 224, 224, 1)",
-        borderRadius: "4px",
+        borderRadius: "0px 0px 4px 4px",
         marginBottom: "30px",
-        fontFamily: 'SF Compact Display'
+        fontFamily: "SF Compact Display"
     })
 );
 const StyledTableCell = (0,styles_.styled)(material_.TableCell)(({ theme  })=>({
@@ -133,64 +133,64 @@ const StyledTableCell = (0,styles_.styled)(material_.TableCell)(({ theme  })=>({
             fontSize: 16,
             fontWeight: 600,
             whiteSpace: "nowrap",
-            fontFamily: 'SF Compact Display'
+            fontFamily: "SF Compact Display"
         },
         [`&.${TableCell_.tableCellClasses.body}`]: {
             fontSize: 16,
             fontWeight: 600,
-            fontFamily: 'SF Compact Display'
+            fontFamily: "SF Compact Display"
         }
     })
 );
 const StyledTableRow = (0,styles_.styled)(material_.TableRow)(({ theme  })=>({
-        cursor: 'pointer',
+        cursor: "pointer",
         "&:nth-of-type(odd)": {
             backgroundColor: "#F9F9F9",
-            fontFamily: 'SF Compact Display'
+            fontFamily: "SF Compact Display"
         },
         "&:nth-of-type(even)": {
             backgroundColor: "#FFFFFF",
-            fontFamily: 'SF Compact Display'
+            fontFamily: "SF Compact Display"
         },
         // hide last border
         "& td": {
             border: 0,
-            fontFamily: 'SF Compact Display'
+            fontFamily: "SF Compact Display"
         }
     })
 );
 const StyledTableFooter = (0,styles_.styled)(material_.TableFooter)(({ theme  })=>({
         borderTop: "1px solid rgba(224, 224, 224, 1)",
         backgroundColor: "#fff",
-        fontFamily: 'SF Compact Display',
+        fontFamily: "SF Compact Display",
         "& td": {
             border: 0,
-            fontFamily: 'SF Compact Display'
+            fontFamily: "SF Compact Display"
         }
     })
 );
 // dashboard nested page componentStyling
 const LightGrayText = (/* unused pure expression or super */ null && (styled("h3")`
-font-weight: 500;
-font-size: 24px;
-color: #BDBDBD;
-margin: 0px 0px 15px 0px;
-text-transform: capitalize;
-font-family:'SF Compact Display';
+  font-weight: 500;
+  font-size: 24px;
+  color: #bdbdbd;
+  margin: 0px 0px 15px 0px;
+  text-transform: capitalize;
+  font-family: "SF Compact Display";
 `));
 const FlexSpaceBetween = (/* unused pure expression or super */ null && (styled("div")`
-display: flex;
-justify-content: space-between;
-align-items: center;
-font-family:'SF Compact Display';
-margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "SF Compact Display";
+  margin-bottom: 15px;
 `));
 const IdText = (/* unused pure expression or super */ null && (styled("h2")`
-font-size: 48px;
-font-weight:400;
-color: #000000;
-margin:0px 0px 15px 0px;
-font-family:'SF Compact Display';
+  font-size: 48px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0px 0px 15px 0px;
+  font-family: "SF Compact Display";
 `));
 const StyledButton = (0,styles_.styled)(material_.Button)(({ theme  })=>({
         backgroundColor: "rgba(63, 81, 181, 0.08)",
@@ -200,65 +200,62 @@ const StyledButton = (0,styles_.styled)(material_.Button)(({ theme  })=>({
         fontWeight: "500",
         color: "rgba(0, 0, 0, 0.87)",
         boxShadow: "none",
-        fontFamily: 'SF Compact Display',
-        ':hover': {
+        fontFamily: "SF Compact Display",
+        ":hover": {
             backgroundColor: "rgba(63, 81, 181, 0.08)",
             color: "rgba(0, 0, 0, 0.87)"
         }
     })
 );
 const InfoCardWrapper = (/* unused pure expression or super */ null && (styled("div")`
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 12px;
-padding:12px 24px;
-margin:25px 0px;
-font-family:'SF Compact Display';
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 12px 24px;
+  margin: 25px 0px;
+  font-family: "SF Compact Display";
 `));
 const StyledDisabledField = (/* unused pure expression or super */ null && (styled(TextField)`
-background: rgba(33, 33, 33, 0.08);
-border-radius: 4px 4px 0px 0px;
-color: rgba(0, 0, 0, 0.87);
-font-family:'SF Compact Display';
-& .MuiOutlinedInput-notchedOutline{
-    border:none;
-    font-family:'SF Compact Display';
-}
+  background: rgba(33, 33, 33, 0.08);
+  border-radius: 4px 4px 0px 0px;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: "SF Compact Display";
+  & .MuiOutlinedInput-notchedOutline {
+    border: none;
+    font-family: "SF Compact Display";
+  }
 `));
 const StyledDrawer = (/* unused pure expression or super */ null && (styled(Drawer)`
-& .MuiDrawer-paper{
-    max-width:430px;
-    width:100%;
-    font-family:'SF Compact Display';
-}
-
+  & .MuiDrawer-paper {
+    max-width: 430px;
+    width: 100%;
+    font-family: "SF Compact Display";
+  }
 `));
-const CommentDrawerHeader = (/* unused pure expression or super */ null && (styled('div')`
-padding: 20px 25px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-border-bottom:1px solid #DEDEDE;
-font-family:'SF Compact Display';
-& h5 {
+const CommentDrawerHeader = (/* unused pure expression or super */ null && (styled("div")`
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dedede;
+  font-family: "SF Compact Display";
+  & h5 {
     font-size: 20px;
     color: #373737;
-    font-weight:400;
-    margin:0px;
-
-}
+    font-weight: 400;
+    margin: 0px;
+  }
 `));
 const CommentTableContainer = (/* unused pure expression or super */ null && (styled(TableContainer)`
-padding:15px 10px;
-border:0px;
-box-shadow:none;
-font-family:'SF Compact Display';
-& .MuiTable-root{
-    border:1px solid #E7E7ED;
+  padding: 15px 10px;
+  border: 0px;
+  box-shadow: none;
+  font-family: "SF Compact Display";
+  & .MuiTable-root {
+    border: 1px solid #e7e7ed;
     box-sizing: border-box;
     border-radius: 4px;
-}
-
+  }
 `));
 
 // EXTERNAL MODULE: external "@mui/material/IconButton"
@@ -363,6 +360,8 @@ var refreshApi = __webpack_require__(6500);
 /* harmony default export */ const trash = ({"src":"/_next/static/media/trash.5b0fef24.svg","height":24,"width":24});
 // EXTERNAL MODULE: external "react-beautiful-dnd"
 var external_react_beautiful_dnd_ = __webpack_require__(9191);
+// EXTERNAL MODULE: ./src/components/GlobalElement.tsx
+var GlobalElement = __webpack_require__(2762);
 ;// CONCATENATED MODULE: ./src/components/Tables/index.tsx
 
 /* eslint-disable @next/next/no-img-element */ 
@@ -379,7 +378,10 @@ var external_react_beautiful_dnd_ = __webpack_require__(9191);
 
 
 
-function UserDetailTabel({ userDatas , headCells , inventoryOrdering , setUserData , setImageReorder , parentPage , disableclickable , isPagination  }) {
+
+function UserDetailTabel({ userDatas , headCells , inventoryOrdering , setUserData , setImageReorder , parentPage , disableclickable , isPagination , gridOptions , onGridHeaderBtnClicked  }) {
+    // Variables
+    const matches567px = (0,material_.useMediaQuery)("(max-width:576px)");
     // States
     const [page, setPage] = external_react_default().useState(0);
     const [rowsPerPage, setRowsPerPage] = external_react_default().useState(5);
@@ -539,43 +541,83 @@ function UserDetailTabel({ userDatas , headCells , inventoryOrdering , setUserDa
     }, [
         userDatas
     ]);
-    return(/*#__PURE__*/ jsx_runtime_.jsx("div", {
+    return(/*#__PURE__*/ jsx_runtime_.jsx(material_.Box, {
         className: "table-wrapper",
-        children: /*#__PURE__*/ jsx_runtime_.jsx(StyledTableContainer, {
-            children: /*#__PURE__*/ jsx_runtime_.jsx(external_react_beautiful_dnd_.DragDropContext, {
-                onDragEnd: onDragEnd,
-                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_.Table, {
+        sx: {
+            position: "relative",
+            paddingTop: matches567px ? "100px" : "69px"
+        },
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(StyledTableContainer, {
+            children: [
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_.Box, {
                     sx: {
-                        minWidth: 650
+                        display: matches567px ? "block" : "flex",
+                        alignItems: "center",
+                        background: "#fff",
+                        position: "absolute",
+                        justifyContent: "end",
+                        top: "0",
+                        left: "0",
+                        right: "0",
+                        border: "1px solid rgba(224, 224, 224, 1)",
+                        borderRadius: "4px 4px 0px 0px",
+                        padding: "16px"
                     },
-                    "aria-label": "simple table",
                     children: [
-                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_.TableHead, {
-                            children: [
-                                /*#__PURE__*/ jsx_runtime_.jsx(material_.TableRow, {
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx(StyledTableCell, {
-                                        colSpan: 9,
-                                        children: /*#__PURE__*/ jsx_runtime_.jsx(SearchWrapper, {
-                                            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(Search, {
-                                                children: [
-                                                    /*#__PURE__*/ jsx_runtime_.jsx(SearchIconWrapper, {
-                                                        children: /*#__PURE__*/ jsx_runtime_.jsx((Search_default()), {
-                                                        })
-                                                    }),
-                                                    /*#__PURE__*/ jsx_runtime_.jsx(StyledInputBase, {
-                                                        placeholder: "Search…",
-                                                        inputProps: {
-                                                            "aria-label": "search"
-                                                        },
-                                                        onChange: searchHandleChange
-                                                    })
-                                                ]
+                        /*#__PURE__*/ jsx_runtime_.jsx(material_.Box, {
+                            sx: {
+                                marginBottom: matches567px ? "8px" : "0px"
+                            },
+                            children: /*#__PURE__*/ jsx_runtime_.jsx(SearchWrapper, {
+                                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(Search, {
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx(SearchIconWrapper, {
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx((Search_default()), {
                                             })
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx(StyledInputBase, {
+                                            placeholder: "Search…",
+                                            inputProps: {
+                                                "aria-label": "search"
+                                            },
+                                            onChange: searchHandleChange
                                         })
+                                    ]
+                                })
+                            })
+                        }),
+                        (gridOptions === null || gridOptions === void 0 ? void 0 : gridOptions.length) && (gridOptions === null || gridOptions === void 0 ? void 0 : gridOptions.map((item)=>{
+                            if (item.type === "button") {
+                                return(/*#__PURE__*/ jsx_runtime_.jsx(material_.Box, {
+                                    sx: {
+                                        textAlign: matches567px ? "right" : "left",
+                                        marginLeft: "8px"
+                                    },
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx(GlobalElement/* TertiaryButton */.C9, {
+                                        variant: "contained",
+                                        color: "secondary",
+                                        onClick: ()=>{
+                                            onGridHeaderBtnClicked && onGridHeaderBtnClicked(item === null || item === void 0 ? void 0 : item.operation);
+                                        },
+                                        children: item === null || item === void 0 ? void 0 : item.label
                                     })
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx(material_.TableRow, {
+                                }));
+                            }
+                        }))
+                    ]
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx(external_react_beautiful_dnd_.DragDropContext, {
+                    onDragEnd: onDragEnd,
+                    children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_.Table, {
+                        sx: {
+                            minWidth: 650
+                        },
+                        "aria-label": "simple table",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx(material_.TableHead, {
+                                children: /*#__PURE__*/ jsx_runtime_.jsx(material_.TableRow, {
                                     children: headCells.map(({ id , name , disabledSorting , onClickAction  }, index)=>/*#__PURE__*/ jsx_runtime_.jsx(StyledTableCell, {
+                                            sortDirection: orderBy1 === id ? order1 : false,
                                             children: disabledSorting ? name : /*#__PURE__*/ jsx_runtime_.jsx(material_.TableSortLabel, {
                                                 active: orderBy1 === id,
                                                 direction: orderBy1 === id ? order1 : asc,
@@ -588,196 +630,186 @@ function UserDetailTabel({ userDatas , headCells , inventoryOrdering , setUserDa
                                         }, `tabelhead-${index}`)
                                     )
                                 })
-                            ]
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx(external_react_beautiful_dnd_.Droppable, {
-                            droppableId: "inventory-table",
-                            children: (provider1)=>{
-                                return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_.TableBody, {
-                                    ref: provider1.innerRef,
-                                    ...provider1.droppableProps,
-                                    children: [
-                                        rowPerPagePagination.map((userData, id1)=>{
-                                            return(/*#__PURE__*/ jsx_runtime_.jsx(external_react_beautiful_dnd_.Draggable, {
-                                                draggableId: `inventory-tabelrow-${id1}`,
-                                                isDragDisabled: !inventoryOrdering,
-                                                index: id1,
-                                                children: (provider)=>{
-                                                    return(/*#__PURE__*/ jsx_runtime_.jsx(StyledTableRow, {
-                                                        ref: provider.innerRef,
-                                                        ...provider.draggableProps,
-                                                        ...provider.dragHandleProps,
-                                                        hover: true,
-                                                        onClick: ()=>handleItemClick(userData)
-                                                        ,
-                                                        sx: {
-                                                            "&:last-child td, &:last-child th": {
-                                                                border: 0
-                                                            }
-                                                        },
-                                                        children: headCells.map(({ id , format , action  }, key)=>{
-                                                            var ref, ref1, ref2, ref3, ref4, ref5, ref6, ref7;
-                                                            return id == "address" || id == "message" || id == "Address1" || // id == "carName" ||
-                                                            id == "query" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    minWidth: 250
-                                                                },
-                                                                children: userData[id]
-                                                            }, `tabelcell-${key}`) : id == "createdAt" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: external_moment_default()(userData[id]).format("MM/DD/YYYY")
-                                                            }, `tabelcell-${key}`) : id == "status" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                children: /*#__PURE__*/ jsx_runtime_.jsx(material_.Button, {
-                                                                    variant: "outlined",
-                                                                    className: userData["status"] == "Available" ? "available" : userData["status"] == "Sold" ? "sold" : userData["status"] == "Negotiation" ? "negotiation" : userData["status"] == "Evaluating" ? "evaluating" : "rejected",
-                                                                    children: userData["status"]
-                                                                })
-                                                            }, `tabelcell-${key}`) : id == "carImage" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: (userData === null || userData === void 0 ? void 0 : userData.Car_Images.length) > 0 && /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                                                                    className: "inventory-table-img",
-                                                                    children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                                                        src: (ref1 = userData === null || userData === void 0 ? void 0 : (ref = userData.Car_Images) === null || ref === void 0 ? void 0 : ref.find((item)=>item.imageOrder == 0
-                                                                        )) === null || ref1 === void 0 ? void 0 : ref1.imageLink,
-                                                                        alt: userData === null || userData === void 0 ? void 0 : userData.Car_Images[0].title
-                                                                    })
-                                                                })
-                                                            }, `tabelcell-${key}`) : id == "firstName" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: userData["firstName"][0].toUpperCase() + userData["firstName"].substring(1) + " " + (userData["lastName"] && userData["lastName"][0].toUpperCase() + userData["lastName"].substring(1))
-                                                            }, `tabelcell-${key}`) : id == "User" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: userData["User"] && userData["User"]["firstName"][0].toUpperCase() + userData["User"]["firstName"].substring(1) + " " + (userData["User"]["lastName"] && userData["User"]["lastName"][0].toUpperCase() + userData["User"]["lastName"].substring(1))
-                                                            }, `tabelcell-${key}`) : id == "userContactNo" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: userData["User"] && userData["User"]["phoneNumber"]
-                                                            }, `tabelcell-${key}`) : id == "userEmail" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: userData["User"] && userData["User"]["emailId"]
-                                                            }, `tabelcell-${key}`) : id == "Brand" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: userData["Brand"] && userData["Brand"]["_id"] == "626e38f26e4527d955eabe65" ? userData["otherName"] : userData["Brand"]["name"]
-                                                            }, `tabelcell-${key}`) : id == "requestPrice" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: userData["requestPrice"] && (0,currecyFormatter/* currencyFormatter */.o)(userData["requestPrice"])
-                                                            }, `tabelcell-${key}`) : id == "bookOnDateTime" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: userData["bookOnDateTime"] && external_moment_default()(userData["bookOnDateTime"]).format(format)
-                                                            }, `tabelcell-${key}`) : id == "carNumber" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: userData["Car_Detail"] && ((ref2 = userData["Car_Detail"]) === null || ref2 === void 0 ? void 0 : ref2.carNumber)
-                                                            }, `tabelcell-${key}`) : id == "carName" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                children: userData["Car_Detail"] && ((ref3 = userData["Car_Detail"]) === null || ref3 === void 0 ? void 0 : ref3.name)
-                                                            }, `tabelcell-${key}`) : id == "year" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: userData["Car_Detail"] && ((ref4 = userData["Car_Detail"]) === null || ref4 === void 0 ? void 0 : ref4.year)
-                                                            }, `tabelcell-${key}`) : id == "milege" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: userData["Car_Detail"] && ((ref5 = userData["Car_Detail"]) === null || ref5 === void 0 ? void 0 : ref5.milege)
-                                                            }, `tabelcell-${key}`) : id == "ownerShip" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: userData["Car_Detail"] && ((ref6 = userData["Car_Detail"]) === null || ref6 === void 0 ? void 0 : ref6.ownerShip)
-                                                            }, `tabelcell-${key}`) : id == "kmDriven" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: userData["Car_Detail"] && ((ref7 = userData["Car_Detail"]) === null || ref7 === void 0 ? void 0 : ref7.kmDriven)
-                                                            }, `tabelcell-${key}`) : id == "delete" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
-                                                                    href: "javascript:void(0)",
-                                                                    onClick: (e)=>{
-                                                                        e.stopPropagation();
-                                                                        onClickAction(action, userData["_id"]);
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx(external_react_beautiful_dnd_.Droppable, {
+                                droppableId: "inventory-table",
+                                children: (provider1)=>{
+                                    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)(material_.TableBody, {
+                                        ref: provider1.innerRef,
+                                        ...provider1.droppableProps,
+                                        children: [
+                                            rowPerPagePagination.map((userData, id1)=>{
+                                                return(/*#__PURE__*/ jsx_runtime_.jsx(external_react_beautiful_dnd_.Draggable, {
+                                                    draggableId: `inventory-tabelrow-${id1}`,
+                                                    isDragDisabled: !inventoryOrdering,
+                                                    index: id1,
+                                                    children: (provider)=>{
+                                                        return(/*#__PURE__*/ jsx_runtime_.jsx(StyledTableRow, {
+                                                            ref: provider.innerRef,
+                                                            ...provider.draggableProps,
+                                                            ...provider.dragHandleProps,
+                                                            hover: true,
+                                                            onClick: ()=>handleItemClick(userData)
+                                                            ,
+                                                            sx: {
+                                                                "&:last-child td, &:last-child th": {
+                                                                    border: 0
+                                                                }
+                                                            },
+                                                            children: headCells.map(({ id , format , action  }, key)=>{
+                                                                var ref, ref1, ref2, ref3, ref4, ref5, ref6, ref7;
+                                                                return id == "address" || id == "message" || id == "Address1" || // id == "carName" ||
+                                                                id == "query" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        minWidth: 250
                                                                     },
-                                                                    className: "delete-btn",
-                                                                    children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                                                        src: trash.src,
-                                                                        alt: ""
+                                                                    children: userData[id]
+                                                                }, `tabelcell-${key}`) : id == "createdAt" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        whiteSpace: "nowrap"
+                                                                    },
+                                                                    children: external_moment_default()(userData[id]).format("MM/DD/YYYY")
+                                                                }, `tabelcell-${key}`) : id == "status" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    children: /*#__PURE__*/ jsx_runtime_.jsx(material_.Button, {
+                                                                        variant: "outlined",
+                                                                        className: userData["status"] == "Available" ? "available" : userData["status"] == "Sold" ? "sold" : userData["status"] == "Negotiation" ? "negotiation" : userData["status"] == "Evaluating" ? "evaluating" : "rejected",
+                                                                        children: userData["status"]
                                                                     })
-                                                                })
-                                                            }, `tabelcell-${key}`) : /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                                sx: {
-                                                                    whiteSpace: "nowrap"
-                                                                },
-                                                                children: userData[id] && userData[id]
-                                                            }, `tabelcell-${key}`);
-                                                        })
-                                                    }));
-                                                }
-                                            }, `inventory-tabelrow-${id1}`));
-                                        }),
-                                        emptyRows > 0 && /*#__PURE__*/ jsx_runtime_.jsx(StyledTableRow, {
-                                            style: {
-                                                height: 53 * emptyRows
-                                            },
-                                            children: /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
-                                                colSpan: 9
+                                                                }, `tabelcell-${key}`) : id == "carImage" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        whiteSpace: "nowrap"
+                                                                    },
+                                                                    children: (userData === null || userData === void 0 ? void 0 : userData.Car_Images.length) > 0 && /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                                                        className: "inventory-table-img",
+                                                                        children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                                                                            src: (ref1 = userData === null || userData === void 0 ? void 0 : (ref = userData.Car_Images) === null || ref === void 0 ? void 0 : ref.find((item)=>item.imageOrder == 0
+                                                                            )) === null || ref1 === void 0 ? void 0 : ref1.imageLink,
+                                                                            alt: userData === null || userData === void 0 ? void 0 : userData.Car_Images[0].title
+                                                                        })
+                                                                    })
+                                                                }, `tabelcell-${key}`) : id == "firstName" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        whiteSpace: "nowrap"
+                                                                    },
+                                                                    children: userData["firstName"][0].toUpperCase() + userData["firstName"].substring(1) + " " + (userData["lastName"] && userData["lastName"][0].toUpperCase() + userData["lastName"].substring(1))
+                                                                }, `tabelcell-${key}`) : id == "User" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        whiteSpace: "nowrap"
+                                                                    },
+                                                                    children: userData["User"] && userData["User"]["firstName"][0].toUpperCase() + userData["User"]["firstName"].substring(1) + " " + (userData["User"]["lastName"] && userData["User"]["lastName"][0].toUpperCase() + userData["User"]["lastName"].substring(1))
+                                                                }, `tabelcell-${key}`) : id == "brand" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        whiteSpace: "nowrap"
+                                                                    },
+                                                                    children: userData["Brand"] && userData["Brand"]["_id"] == "626e38f26e4527d955eabe65" ? userData["otherName"] : userData["Brand"]["name"]
+                                                                }, `tabelcell-${key}`) : id == "requestPrice" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        whiteSpace: "nowrap"
+                                                                    },
+                                                                    children: userData["requestPrice"] && (0,currecyFormatter/* currencyFormatter */.o)(userData["requestPrice"])
+                                                                }, `tabelcell-${key}`) : id == "bookOnDateTime" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        whiteSpace: "nowrap"
+                                                                    },
+                                                                    children: userData["bookOnDateTime"] && external_moment_default()(userData["bookOnDateTime"]).format(format)
+                                                                }, `tabelcell-${key}`) : id == "carNumber" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        whiteSpace: "nowrap"
+                                                                    },
+                                                                    children: userData["Car_Detail"] && ((ref2 = userData["Car_Detail"]) === null || ref2 === void 0 ? void 0 : ref2.carNumber)
+                                                                }, `tabelcell-${key}`) : id == "carName" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    children: userData["Car_Detail"] && ((ref3 = userData["Car_Detail"]) === null || ref3 === void 0 ? void 0 : ref3.name)
+                                                                }, `tabelcell-${key}`) : id == "year" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        whiteSpace: "nowrap"
+                                                                    },
+                                                                    children: userData["Car_Detail"] && ((ref4 = userData["Car_Detail"]) === null || ref4 === void 0 ? void 0 : ref4.year)
+                                                                }, `tabelcell-${key}`) : id == "milege" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        whiteSpace: "nowrap"
+                                                                    },
+                                                                    children: userData["Car_Detail"] && ((ref5 = userData["Car_Detail"]) === null || ref5 === void 0 ? void 0 : ref5.milege)
+                                                                }, `tabelcell-${key}`) : id == "ownerShip" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        whiteSpace: "nowrap"
+                                                                    },
+                                                                    children: userData["Car_Detail"] && ((ref6 = userData["Car_Detail"]) === null || ref6 === void 0 ? void 0 : ref6.ownerShip)
+                                                                }, `tabelcell-${key}`) : id == "kmDriven" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        whiteSpace: "nowrap"
+                                                                    },
+                                                                    children: userData["Car_Detail"] && ((ref7 = userData["Car_Detail"]) === null || ref7 === void 0 ? void 0 : ref7.kmDriven)
+                                                                }, `tabelcell-${key}`) : id == "delete" ? /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        whiteSpace: "nowrap"
+                                                                    },
+                                                                    children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                                                        href: "javascript:void(0)",
+                                                                        onClick: (e)=>{
+                                                                            e.stopPropagation();
+                                                                            onClickAction(action, userData["_id"]);
+                                                                        },
+                                                                        className: "delete-btn",
+                                                                        children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                                                                            src: trash.src,
+                                                                            alt: ""
+                                                                        })
+                                                                    })
+                                                                }, `tabelcell-${key}`) : /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                                    sx: {
+                                                                        whiteSpace: "nowrap"
+                                                                    },
+                                                                    children: userData[id] && userData[id]
+                                                                }, `tabelcell-${key}`);
+                                                            })
+                                                        }));
+                                                    }
+                                                }, `inventory-tabelrow-${id1}`));
+                                            }),
+                                            emptyRows > 0 && /*#__PURE__*/ jsx_runtime_.jsx(StyledTableRow, {
+                                                style: {
+                                                    height: 53 * emptyRows
+                                                },
+                                                children: /*#__PURE__*/ jsx_runtime_.jsx(material_.TableCell, {
+                                                    colSpan: 9
+                                                })
                                             })
-                                        })
-                                    ]
-                                }));
-                            }
-                        }),
-                        isPagination ? /*#__PURE__*/ jsx_runtime_.jsx(StyledTableFooter, {
-                            children: /*#__PURE__*/ jsx_runtime_.jsx(material_.TableRow, {
-                                children: /*#__PURE__*/ jsx_runtime_.jsx(material_.TablePagination, {
-                                    rowsPerPageOptions: [
-                                        5,
-                                        6,
-                                        8,
-                                        {
-                                            label: "All",
-                                            value: -1
-                                        }
-                                    ],
-                                    colSpan: 9,
-                                    count: userDatas.length,
-                                    rowsPerPage: rowsPerPage,
-                                    page: page,
-                                    SelectProps: {
-                                        inputProps: {
-                                            "aria-label": "rows per page"
+                                        ]
+                                    }));
+                                }
+                            }),
+                            isPagination ? /*#__PURE__*/ jsx_runtime_.jsx(StyledTableFooter, {
+                                children: /*#__PURE__*/ jsx_runtime_.jsx(material_.TableRow, {
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx(material_.TablePagination, {
+                                        rowsPerPageOptions: [
+                                            5,
+                                            6,
+                                            8,
+                                            {
+                                                label: "All",
+                                                value: -1
+                                            }
+                                        ],
+                                        colSpan: 9,
+                                        count: userDatas.length,
+                                        rowsPerPage: rowsPerPage,
+                                        page: page,
+                                        SelectProps: {
+                                            inputProps: {
+                                                "aria-label": "rows per page"
+                                            },
+                                            native: true
                                         },
-                                        native: true
-                                    },
-                                    onPageChange: handleChangePage,
-                                    onRowsPerPageChange: handleChangeRowsPerPage,
-                                    ActionsComponent: tabelPaginationAction
+                                        onPageChange: handleChangePage,
+                                        onRowsPerPageChange: handleChangeRowsPerPage,
+                                        ActionsComponent: tabelPaginationAction
+                                    })
                                 })
-                            })
-                        }) : null
-                    ]
+                            }) : null
+                        ]
+                    })
                 })
-            })
+            ]
         })
     }));
 };

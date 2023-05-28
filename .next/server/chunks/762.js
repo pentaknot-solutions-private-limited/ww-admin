@@ -8,6 +8,7 @@ exports.modules = {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "kq": () => (/* binding */ SecondaryButton),
+/* harmony export */   "C9": () => (/* binding */ TertiaryButton),
 /* harmony export */   "tH": () => (/* binding */ StyledTextField),
 /* harmony export */   "Jn": () => (/* binding */ StyledDrawer),
 /* harmony export */   "Uy": () => (/* binding */ CommentDrawerHeader),
@@ -29,6 +30,23 @@ const SecondaryButton = (0,_mui_system__WEBPACK_IMPORTED_MODULE_1__.styled)(_mui
   @media (max-width: 768px) {
     padding: 5px 10px;
   }
+`;
+const TertiaryButton = (0,_mui_system__WEBPACK_IMPORTED_MODULE_1__.styled)(_mui_material__WEBPACK_IMPORTED_MODULE_0__.Button)`
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: none;
+  background-color: rgb(249, 249, 249);
+  &:hover {
+    background-color: rgb(237, 237, 238);
+    box-shadow: none;
+  }
+  border: 1px solid rgb(194, 194, 194);
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.87);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 5px 10px;
+  height: 30px;
 `;
 const StyledTextField = (0,_mui_system__WEBPACK_IMPORTED_MODULE_1__.styled)(_mui_material__WEBPACK_IMPORTED_MODULE_0__.TextField)`
   background: rgba(33, 33, 33, 0.08);
