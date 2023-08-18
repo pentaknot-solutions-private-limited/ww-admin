@@ -294,6 +294,8 @@ export default function CarForm({ formik, data, setData }: any) {
             data={data}
             id="inputText"
             onChange={(event: any, editor: any) => {
+              event.preventDefault();
+              event.stopPropagation();
               if (editor.getData().length > 0) {
                 setAdditionalFeatureValidation(false);
                 setData(editor.getData());

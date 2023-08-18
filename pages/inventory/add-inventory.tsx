@@ -77,6 +77,7 @@ export default function AddInventory() {
 
   // Functions
   const handleSubmit = async (values: any, { resetForm }: any) => {
+    console.log("handle submit");
     setSiteError("");
     let payload;
     if (user) {
@@ -320,7 +321,7 @@ export default function AddInventory() {
           <div className="site-card">
             <React.Fragment>
               <Formik
-                enableReinitialize
+                // enableReinitialize
                 initialValues={initialValues}
                 // validationSchema={validationSchema}
                 onSubmit={handleSubmit}
