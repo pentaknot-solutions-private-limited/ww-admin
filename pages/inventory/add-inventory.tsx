@@ -68,6 +68,7 @@ export default function AddInventory() {
     manufactureYear: new Date(),
     carBrand: "",
     carBodyId: "",
+    carStatus: "",
   };
   const carService = new CarService();
   const inventoryService = new InventoryService();
@@ -92,6 +93,7 @@ export default function AddInventory() {
         maxPrice: values?.maxPrice,
         carMakeId: values?.carBrand,
         carBodyId: values?.carBodyId,
+        carStatus: values?.carStatus,
         equipmentName: data,
         userId: user?.id,
         roleId: "617adebb2c17ccbd23fe474f",
@@ -626,6 +628,38 @@ export default function AddInventory() {
                                           </MenuItem>
                                         )
                                       )}
+                                  </Select>
+                                </FormControl>
+                                <span className="error">
+                                  {formik.touched.carBodyId &&
+                                    formik.errors.carBodyId}
+                                </span>
+                              </Grid>
+                              <Grid
+                                item
+                                xs={12}
+                                sm={6}
+                                md={3}
+                                className="site-form-field"
+                              >
+                                <FormControl fullWidth>
+                                  <InputLabel id="carStatus-lable">
+                                    Car Status
+                                  </InputLabel>
+                                  <Select
+                                    labelId="carStatus-lable"
+                                    id="carStatus-select"
+                                    label="Car Status"
+                                    name="carStatus"
+                                    required
+                                    value={formik.values.carStatus}
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                  >
+                                    <MenuItem value={"SOLD"}>SOLD</MenuItem>
+                                    <MenuItem value={"AVAILABLE"}>
+                                      AVAILABLE
+                                    </MenuItem>
                                   </Select>
                                 </FormControl>
                                 <span className="error">

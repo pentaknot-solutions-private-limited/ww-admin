@@ -74,6 +74,7 @@ export default function InspectionDetail() {
     maxPrice: inventoryData && inventoryData[0]?.Car_Detail.maxPrice,
     milege: inventoryData && inventoryData[0]?.Car_Detail.milege,
     model: inventoryData && inventoryData[0]?.Car_Detail.modelName,
+    carStatus: inventoryData && inventoryData[0]?.Car_Detail.carStatus,
     ownerShip: inventoryData && inventoryData[0]?.Car_Detail.ownerShip,
     manufactureYear: inventoryData && inventoryData[0]?.Car_Detail.year,
     carBrand: inventoryData && inventoryData[0]?.Car_Make._id,
@@ -126,6 +127,7 @@ export default function InspectionDetail() {
           milege: values?.milege,
           carMakeId: values?.carBrand,
           carBodyId: values?.carBodyId,
+          carStatus: values?.carStatus,
           userId: user?.id,
           roleId: "617adebb2c17ccbd23fe474f",
         };
@@ -657,6 +659,37 @@ export default function InspectionDetail() {
                                 {item?.bodyType}
                               </MenuItem>
                             ))}
+                        </Select>
+                      </FormControl>
+                      <span className="error">
+                        {props.touched.carBodyId && props.errors.carBodyId}
+                      </span>
+                    </Grid>
+                    <Grid
+                      item
+                      xs={12}
+                      sm={6}
+                      md={3}
+                      className="site-form-field"
+                    >
+                      <FormControl fullWidth>
+                        <InputLabel id="carStatus-lable">Car Status</InputLabel>
+                        <Select
+                          labelId="carStatus-lable"
+                          id="carStatus-select"
+                          label="Car Status"
+                          name="carStatus"
+                          required
+                          value={props.values.carStatus}
+                          onChange={props.handleChange}
+                          onBlur={props.handleBlur}
+                          inputProps={{
+                            readOnly: edit,
+                          }}
+                          disabled={edit}
+                        >
+                          <MenuItem value={"SOLD"}>SOLD</MenuItem>
+                          <MenuItem value={"AVAILABLE"}>AVAILABLE</MenuItem>
                         </Select>
                       </FormControl>
                       <span className="error">
